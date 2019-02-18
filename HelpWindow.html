@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>AddressBook Level 4 - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>README - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>AddressBook Level 4 - User Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>README - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>W10-1</code>      Since: <code>Feb 2019</code>      Licence: <code>MIT</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -11,26 +11,75 @@
 <ul class="sectlevel1">
 <li><a href="#introduction">1. Introduction</a></li>
 <li><a href="#quick-start">2. Quick Start</a></li>
-<li><a href="#Features">3. Features</a>
+<li><a href="#Command">3. Command Format</a></li>
+<li><a href="#viewing-help-code-help-code">4. Viewing help : <code>help</code></a></li>
+<li><a href="#context-switching-commands">5. Context-switching commands</a>
 <ul class="sectlevel2">
-<li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></li>
-<li><a href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></li>
-<li><a href="#selecting-a-person-code-select-code">3.7. Selecting a person : <code>select</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.13. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#showing-links-code-list-code-displays-link-list">5.1. Showing links: <code>list</code> (displays link list)</a></li>
+<li><a href="#searching-online-for-links-code-search-code-displays-link-list">5.2. Searching online for links: <code>search</code> (displays link list)</a></li>
+<li><a href="#showing-archived-links-code-archives-code-displays-link-list">5.3. Showing archived links: <code>archives</code> (displays link list)</a></li>
+<li><a href="#showing-feeds-code-feeds-code-displays-feed-list">5.4. Showing feeds: <code>feeds</code> (displays feed list)</a></li>
+<li><a href="#searching-online-for-feeds-code-searchfeeds-code-displays-feed-list">5.5. Searching online for feeds: <code>searchfeeds</code> (displays feed list)</a></li>
+<li><a href="#showing-reading-statistics-code-stats-code">5.6. Showing reading statistics: <code>stats</code></a></li>
 </ul>
 </li>
-<li><a href="#faq">4. FAQ</a></li>
-<li><a href="#command-summary">5. Command Summary</a></li>
+<li><a href="#in-code-list-code-context-displays-link-list">6. In <code>list</code> context (displays link list)</a>
+<ul class="sectlevel2">
+<li><a href="#adding-links-code-add-code">6.1. Adding links: <code>add</code></a></li>
+<li><a href="#editing-a-link-code-edit-code">6.2. Editing a link: <code>edit</code></a></li>
+<li><a href="#deleting-a-link-code-delete-code">6.3. Deleting a link: <code>delete</code></a></li>
+<li><a href="#redownloading-links-code-redownload-code">6.4. Redownloading links: <code>redownload</code></a></li>
+<li><a href="#marking-links-as-read-code-read-code">6.5. Marking links as read: <code>read</code></a></li>
+<li><a href="#marking-links-as-unread-code-unread-code">6.6. Marking links as unread: <code>unread</code></a></li>
+<li><a href="#selecting-a-link-code-select-code">6.7. Selecting a link: <code>select</code></a></li>
+<li><a href="#changing-the-viewing-mode-code-view-code">6.8. Changing the viewing mode: <code>view</code></a></li>
+<li><a href="#archiving-links-code-archive-code">6.9. Archiving links: <code>archive</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">6.10. Clearing all entries : <code>clear</code></a></li>
+</ul>
+</li>
+<li><a href="#in-code-search-code-context-displays-link-list">7. In <code>search</code> context (displays link list)</a>
+<ul class="sectlevel2">
+<li><a href="#adding-links-code-add-code-2">7.1. Adding links: <code>add</code></a></li>
+<li><a href="#selecting-a-link-code-select-code-2">7.2. Selecting a link: <code>select</code></a></li>
+<li><a href="#changing-the-viewing-mode-code-view-code-2">7.3. Changing the viewing mode: <code>view</code></a></li>
+</ul>
+</li>
+<li><a href="#in-code-feeds-code-context-displays-feed-list">8. In <code>feeds</code> context (displays feed list)</a>
+<ul class="sectlevel2">
+<li><a href="#adding-a-feed-code-add-code">8.1. Adding a feed: <code>add</code></a></li>
+<li><a href="#updating-links-from-feeds-code-update-code">8.2. Updating links from feeds: <code>update</code></a></li>
+<li><a href="#selecting-a-feed-code-select-code">8.3. Selecting a feed: <code>select</code></a></li>
+<li><a href="#editing-a-feed-code-edit-code">8.4. Editing a feed: <code>edit</code></a></li>
+<li><a href="#deleting-a-feed-code-delete-code">8.5. Deleting a feed: <code>delete</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code-2">8.6. Clearing all entries : <code>clear</code></a></li>
+</ul>
+</li>
+<li><a href="#in-code-searchfeeds-code-context-displays-feed-list">9. In <code>searchfeeds</code> context (displays feed list)</a>
+<ul class="sectlevel2">
+<li><a href="#adding-a-feed-code-add-code-2">9.1. Adding a feed: <code>add</code></a></li>
+<li><a href="#selecting-a-feed-code-select-code-2">9.2. Selecting a feed: <code>select</code></a></li>
+</ul>
+</li>
+<li><a href="#in-code-archives-code-context-displays-link-list">10. In <code>archives</code> context (displays link list)</a>
+<ul class="sectlevel2">
+<li><a href="#unarchiving-links-code-unarchive-code">10.1. Unarchiving links: <code>unarchive</code></a></li>
+<li><a href="#deleting-an-archived-link-code-delete-code">10.2. Deleting an archived link: <code>delete</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code-3">10.3. Clearing all entries : <code>clear</code></a></li>
+</ul>
+</li>
+<li><a href="#non-contextual-commands">11. Non-contextual commands</a>
+<ul class="sectlevel2">
+<li><a href="#custom-user-command-macro-code-macro-code">11.1. Custom user command macro: <code>macro</code></a></li>
+<li><a href="#export-settings-and-data-to-an-export-file-code-export-code">11.2. Export settings and data to an export file : <code>export</code></a></li>
+<li><a href="#import-settings-and-data-from-an-export-file-code-import-code">11.3. Import settings and data from an export file : <code>import</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">11.4. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">11.5. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">11.6. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">11.7. Exiting the program : <code>exit</code></a></li>
+</ul>
+</li>
+<li><a href="#faq">12. FAQ</a></li>
+<li><a href="#command-summary">13. Command Summary</a></li>
 </ul>
 </div>
 </div>
@@ -38,7 +87,14 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AddressBook Level 4 (AB4) is for those who <strong>prefer to use a desktop app for managing contacts</strong>. More importantly, AB4 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB4 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>README helps you discover, curate and read more content you care about in less time.
+It is a combined bookmark manager and feed reader with features like offline capability, distraction-free reading view, powerful organization options and more.
+It is designed for heavy content consumers with irregular internet access, whether because of having to fly often or internet access being too expensive.
+README is for those who <strong>prefer to use a desktop app for managing links</strong>.
+More importantly, README is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI).
+If you can type fast, README can get your link management tasks done faster than traditional GUI apps.
+Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started.
+Enjoy!</p>
 </div>
 </div>
 </div>
@@ -51,10 +107,10 @@
 <p>Ensure you have Java version <code>9</code> or later installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/se-edu/addressbook-level4/releases">here</a>.</p>
+<p>Download the latest <code>README.jar</code> <a href="https://github.com/CS2103-AY1819S2-W10-1/main/releases">here</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
+<p>Copy the file to the folder you want to use as the home folder for your README.</p>
 </li>
 <li>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
@@ -69,17 +125,20 @@
 e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
 </li>
 <li>
-<p>Some example commands you can try:</p>
+<p>Try these commands in order!</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>list</code></strong> : lists all contacts</p>
+<p><strong><code>list</code></strong> : lists all saved links</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
+<p><strong><code>select</code></strong><code>1</code> : select the first link displayed for reading</p>
 </li>
 <li>
-<p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
+<p><strong><code>read</code></strong><code>1</code> : marks the 1st link as read</p>
+</li>
+<li>
+<p><strong><code>delete</code></strong><code>2</code> : deletes the 2nd link</p>
 </li>
 <li>
 <p><strong><code>exit</code></strong> : exits the app</p>
@@ -88,133 +147,77 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </li>
 <li>
-<p>Refer to <a href="#Features">Section 3, &#8220;Features&#8221;</a> for details of each command.</p>
+<p>Or these commands, if you have internet access!</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><code>search</code></strong><code>Trump</code> : searches online for links related to keyword 'Trump'.</p>
+</li>
+<li>
+<p><strong><code>add</code></strong><code>1</code> : adds the first link displayed to the reading list</p>
+</li>
+<li>
+<p><strong><code>list</code></strong> : lists all saved links, including the newly added one</p>
+</li>
+<li>
+<p><strong><code>exit</code></strong> : exits the app</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Refer to below for details of each command.</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Features"><a class="link" href="#Features">3. Features</a></h2>
+<h2 id="Command"><a class="link" href="#Command">3. Command Format</a></h2>
 <div class="sectionbody">
 <div class="exampleblock">
 <div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>add n/NAME</code>, <code>NAME</code> is a parameter which can be used as <code>add n/John Doe</code>.</p>
+<p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user.</p>
 </li>
 <li>
-<p>Items in square brackets are optional e.g <code>n/NAME [t/TAG]</code> can be used as <code>n/John Doe t/friend</code> or as <code>n/John Doe</code>.</p>
+<p>Items in square brackets are optional.</p>
 </li>
 <li>
-<p>Items with <code>…</code>​ after them can be used multiple times including zero times e.g. <code>[t/TAG]&#8230;&#8203;</code> can be used as <code>&#160;</code> (i.e. 0 times), <code>t/friend</code>, <code>t/friend t/family</code> etc.</p>
+<p>Items with <code>…</code>​ after them can be used multiple times including zero times.</p>
 </li>
 <li>
-<p>Parameters can be in any order e.g. if the command specifies <code>n/NAME p/PHONE_NUMBER</code>, <code>p/PHONE_NUMBER n/NAME</code> is also acceptable.</p>
+<p>Parameters can be in any order.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">4. Viewing help : <code>help</code></a></h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Format: <code>help</code></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></h3>
+</div>
+<div class="sect1">
+<h2 id="context-switching-commands"><a class="link" href="#context-switching-commands">5. Context-switching commands</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Adds a person to the address book<br>
-Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-A person can have any number of tags (including 0)
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
-</li>
-<li>
-<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
-</li>
-</ul>
-</div>
+<p>These commands change the context in which commands with shared command words operate (e.g. <code>add</code>, <code>edit</code>, <code>delete</code>).</p>
 </div>
 <div class="sect2">
-<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></h3>
+<h3 id="showing-links-code-list-code-displays-link-list"><a class="link" href="#showing-links-code-list-code-displays-link-list">5.1. Showing links: <code>list</code> (displays link list)</a></h3>
 <div class="paragraph">
-<p>Shows a list of all persons in the address book.<br>
-Format: <code>list</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></h3>
-<div class="paragraph">
-<p>Edits an existing person in the address book.<br>
-Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>At least one of the optional fields must be provided.</p>
-</li>
-<li>
-<p>Existing values will be updated to the input values.</p>
-</li>
-<li>
-<p>When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.</p>
-</li>
-<li>
-<p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
-</li>
-</ul>
-</div>
-</div>
+<p>Shows your reading list of saved links, optionally finding links with headlines containing any of the given keywords, and filtering by read status, date added and tags.</p>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>edit 1 p/91234567 e/johndoe@example.com</code><br>
-Edits the phone number and email address of the 1st person to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
-</li>
-<li>
-<p><code>edit 2 n/Betsy Crower t/</code><br>
-Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all existing tags.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></h3>
-<div class="paragraph">
-<p>Finds persons whose names contain any of the given keywords.<br>
-Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+<p>Format: <code>list [KEYWORD]&#8230;&#8203; [r/READ_STATUS] [d/DATE_ADDED] [t/TAG]&#8230;&#8203; [s/SORT_BY]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -227,13 +230,13 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
 </li>
 <li>
-<p>Only the name is searched.</p>
+<p>Only the headline is searched.</p>
 </li>
 <li>
 <p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
 </li>
 <li>
-<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+<p>Links matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
 </li>
 </ul>
 </div>
@@ -245,31 +248,780 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>find John</code><br>
-Returns <code>john</code> and <code>John Doe</code></p>
+<p><code>list</code> Lists all links</p>
 </li>
 <li>
-<p><code>find Betsy Tim John</code><br>
-Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+<p><code>list Apple r/read tech</code> Lists links with headlines containing <code>apple</code> which are already read and tagged with <code>Tech</code></p>
+</li>
+<li>
+<p><code>list Trump</code> Lists links with headlines containing <code>trump</code> and <code>Donald Trump</code> etc.</p>
+</li>
+<li>
+<p><code>list r/unread</code> Lists only unread links</p>
+</li>
+<li>
+<p><code>list t/Tech</code> Lists links tagged with “Tech”</p>
+</li>
+<li>
+<p><code>list t/</code> Lists untagged links</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></h3>
+<h3 id="searching-online-for-links-code-search-code-displays-link-list"><a class="link" href="#searching-online-for-links-code-search-code-displays-link-list">5.2. Searching online for links: <code>search</code> (displays link list)</a></h3>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
-Format: <code>delete INDEX</code></p>
+<p>Searches online for links that you can subsequently add.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>search [KEYWORD]&#8230;&#8203;</code>
+Format: <code>search FEED_URL</code>
+Format: <code>search ARTICLE_URL</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>search</code> Returns top headlines</p>
+</li>
+<li>
+<p><code>search Trump</code> Returns links containing the <code>Trump</code> keyword</p>
+</li>
+<li>
+<p><code>search <a href="https://live.engadget.com/rss.xml" class="bare">https://live.engadget.com/rss.xml</a></code> Returns links from this feed</p>
+</li>
+<li>
+<p><code>search <a href="https://live.engadget.com/2019/02/08/microsoft-internet-explorer-technical-debt/" class="bare">https://live.engadget.com/2019/02/08/microsoft-internet-explorer-technical-debt/</a></code> Returns all links from this article</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="showing-archived-links-code-archives-code-displays-link-list"><a class="link" href="#showing-archived-links-code-archives-code-displays-link-list">5.3. Showing archived links: <code>archives</code> (displays link list)</a></h3>
+<div class="paragraph">
+<p>Shows a list of archived links, optionally finding links with headlines containing any of the given keywords, and filtering by read status, date added and tags.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>archives [KEYWORD]&#8230;&#8203; [r/READ_STATUS] [d/DATE_ADDED] [t/TAG]&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Deletes the person at the specified <code>INDEX</code>.</p>
+<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed person list.</p>
+<p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
+</li>
+<li>
+<p>Only the headline is searched.</p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
+</li>
+<li>
+<p>Links matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>archives</code> Lists all archived links</p>
+</li>
+<li>
+<p><code>archives Apple r/read t/Tech</code> Lists archived links with headlines containing <code>apple</code> which are already read and tagged with <code>Tech</code></p>
+</li>
+<li>
+<p><code>archives Trump</code> Lists archived links with headlines containing <code>trump</code> and <code>Donald Trump</code> etc.</p>
+</li>
+<li>
+<p><code>archives r/unread</code> Lists only unread archived links</p>
+</li>
+<li>
+<p><code>archives t/Tech</code> Lists archived links tagged with “Tech”</p>
+</li>
+<li>
+<p><code>archives t/</code> Lists untagged archived links</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="showing-feeds-code-feeds-code-displays-feed-list"><a class="link" href="#showing-feeds-code-feeds-code-displays-feed-list">5.4. Showing feeds: <code>feeds</code> (displays feed list)</a></h3>
+<div class="paragraph">
+<p>Shows a list of feeds being followed.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>feeds [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>feeds</code> Lists all feeds</p>
+</li>
+<li>
+<p><code>feeds t/Business</code> Lists all feeds tagged with “Business”</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="searching-online-for-feeds-code-searchfeeds-code-displays-feed-list"><a class="link" href="#searching-online-for-feeds-code-searchfeeds-code-displays-feed-list">5.5. Searching online for feeds: <code>searchfeeds</code> (displays feed list)</a></h3>
+<div class="paragraph">
+<p>Searches online for feeds that you can subsequently follow.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>searchfeeds [KEYWORD]&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>searchfeeds</code> Shows some starter feeds you can add</p>
+</li>
+<li>
+<p><code>searchfeeds Tech Business</code> Searches for <code>Tech</code> or <code>Business</code> feeds</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="showing-reading-statistics-code-stats-code"><a class="link" href="#showing-reading-statistics-code-stats-code">5.6. Showing reading statistics: <code>stats</code></a></h3>
+<div class="paragraph">
+<p>Shows helpful and fun statistics about your reading progress and habits.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>stats</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="in-code-list-code-context-displays-link-list"><a class="link" href="#in-code-list-code-context-displays-link-list">6. In <code>list</code> context (displays link list)</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="adding-links-code-add-code"><a class="link" href="#adding-links-code-add-code">6.1. Adding links: <code>add</code></a></h3>
+<div class="paragraph">
+<p>Adds a single link from a URL to the manager. Content is automatically downloaded to disk.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add URL [h/HEADLINE_OVERRIDE] [c/COMMENT] [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+A link can have any number of tags (including 0).
+Headline will be automatically filled by parsing the link if you do not provide it.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add <a href="https://www.theatlantic.com/magazine/archive/2019/03/ford-ceo-jim-hackett-ux-design-thinking/580438/" class="bare">https://www.theatlantic.com/magazine/archive/2019/03/ford-ceo-jim-hackett-ux-design-thinking/580438/</a> c/explains why UX is important t/Business</code> Adds a single link with a comment and tagged with “Business”</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-link-code-edit-code"><a class="link" href="#editing-a-link-code-edit-code">6.2. Editing a link: <code>edit</code></a></h3>
+<div class="paragraph">
+<p>Edits an existing link in the manager.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>edit INDEX [u/URL] [h/HEADLINE_OVERRIDE] [s/STATUS] [c/COMMENT] [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Edits the link at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed link list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>At least one of the optional fields must be provided.</p>
+</li>
+<li>
+<p>Existing values will be updated to the input values.</p>
+</li>
+<li>
+<p>When editing tags, the existing tags of the link will be removed i.e adding of tags is not cumulative.</p>
+</li>
+<li>
+<p>You can remove all the link&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit 1 c/need to read again</code> Edits the comment attached to the 1st link</p>
+</li>
+<li>
+<p><code>edit 2 t/</code> Clears all existing tags from the 2nd link</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-link-code-delete-code"><a class="link" href="#deleting-a-link-code-delete-code">6.3. Deleting a link: <code>delete</code></a></h3>
+<div class="paragraph">
+<p>Deletes specified links from the manager.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>delete INDICES</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the links at the specified <code>INDICES</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed link list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Format: <code>delete all</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes all shown links</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete 1,2-6</code> Deletes the 1st, and 2nd to 6th links</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="redownloading-links-code-redownload-code"><a class="link" href="#redownloading-links-code-redownload-code">6.4. Redownloading links: <code>redownload</code></a></h3>
+<div class="paragraph">
+<p>Redownload the specified links to get the latest version of their content.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>redownload INDICES</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Refreshes the links at the specified <code>INDICES</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed link list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Format: <code>redownload all</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>redownload all</code> Redownload all shown links</p>
+</li>
+<li>
+<p><code>redownload 1,3-5</code> Redownloads the 1st and 3rd to 5th links.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="marking-links-as-read-code-read-code"><a class="link" href="#marking-links-as-read-code-read-code">6.5. Marking links as read: <code>read</code></a></h3>
+<div class="paragraph">
+<p>Marks links as read.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>read INDICES</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>read all</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Equivalent to <code>edit INDEX r/read</code> on multiple indices</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>read all</code> Marks all shown links as read</p>
+</li>
+<li>
+<p><code>read 1,2,4-6</code> Marks the 1st, 2nd and 4th to 6th links as read</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="marking-links-as-unread-code-unread-code"><a class="link" href="#marking-links-as-unread-code-unread-code">6.6. Marking links as unread: <code>unread</code></a></h3>
+<div class="paragraph">
+<p>Marks links as unread.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>unread INDICES</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>unread all</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Equivalent to <code>edit INDEX r/unread</code> on multiple indices</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>unread all</code> Marks all shown links as unread</p>
+</li>
+<li>
+<p><code>unread 1,2,4-6</code> Marks the 1st, 2nd and 4th to 6th links as unread</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="selecting-a-link-code-select-code"><a class="link" href="#selecting-a-link-code-select-code">6.7. Selecting a link: <code>select</code></a></h3>
+<div class="paragraph">
+<p>Selects the link identified by the index number used in the displayed link list for viewing.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>select INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Selects the link and loads the content of the link at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed link list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1`, 2, 3, &#8230;&#8203;`</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>select 2</code> Selects the 2nd link in the manager</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="changing-the-viewing-mode-code-view-code"><a class="link" href="#changing-the-viewing-mode-code-view-code">6.8. Changing the viewing mode: <code>view</code></a></h3>
+<div class="paragraph">
+<p>Changes the viewing mode between reader view and original view.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>view MODE [s/style] [o/options]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>view browser</code> Use browser view</p>
+</li>
+<li>
+<p><code>view reader</code> Use reader view</p>
+</li>
+<li>
+<p><code>view reader s/dark</code> Use reader view with dark style</p>
+</li>
+<li>
+<p><code>view reader o/fullscreen</code> Use reader view with maximised window</p>
+</li>
+<li>
+<p><code>view reader s/solarized o/fullscreen</code> Use reader view with "Solarized" style and maximised window</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="archiving-links-code-archive-code"><a class="link" href="#archiving-links-code-archive-code">6.9. Archiving links: <code>archive</code></a></h3>
+<div class="paragraph">
+<p>Moves the links to the archive and remove downloaded content for those links.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>archive INDICES</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>archive all</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>archive all</code> Archives all shown links</p>
+</li>
+<li>
+<p><code>archive 1,2,4-6</code> Archives the 1st, 2nd and 4th to 6th links</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">6.10. Clearing all entries : <code>clear</code></a></h3>
+<div class="paragraph">
+<p>Clears all saved links from the manager.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>clear</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="in-code-search-code-context-displays-link-list"><a class="link" href="#in-code-search-code-context-displays-link-list">7. In <code>search</code> context (displays link list)</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="adding-links-code-add-code-2"><a class="link" href="#adding-links-code-add-code-2">7.1. Adding links: <code>add</code></a></h3>
+<div class="paragraph">
+<p>Adds links from search results to the manager. Content is automatically downloaded to disk.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add INDEX [h/HEADLINE_OVERRIDE] [c/COMMENT] [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add INDICES [c/COMMENT] [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add all</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A link can have any number of tags (including 0).
+Headline will be automatically filled by parsing the link if you do not provide it.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add 1 c/explains why UX is important t/Business</code> Adds the 1st link with a comment and tagged with “Business”</p>
+</li>
+<li>
+<p><code>add 4-6 c/read by Monday t/School</code> Adds the 4th to 6th links with the same comment and tagged with “School"</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="selecting-a-link-code-select-code-2"><a class="link" href="#selecting-a-link-code-select-code-2">7.2. Selecting a link: <code>select</code></a></h3>
+<div class="paragraph">
+<p>Selects the link identified by the index number used in the displayed link list for viewing.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>select INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Selects the link and loads the content of the link at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed link list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1`, 2, 3, &#8230;&#8203;`</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>select 2</code> Selects the 2nd link in the manager</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="changing-the-viewing-mode-code-view-code-2"><a class="link" href="#changing-the-viewing-mode-code-view-code-2">7.3. Changing the viewing mode: <code>view</code></a></h3>
+<div class="paragraph">
+<p>Changes the viewing mode between reader view and original view.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>view MODE [s/style] [o/options]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>view browser</code> Use browser view</p>
+</li>
+<li>
+<p><code>view reader</code> Use reader view</p>
+</li>
+<li>
+<p><code>view reader s/dark</code> Use reader view with dark style</p>
+</li>
+<li>
+<p><code>view reader o/fullscreen</code> Use reader view with maximised window</p>
+</li>
+<li>
+<p><code>view reader s/solarized o/fullscreen</code> Use reader view with "Solarized" style and maximised window</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="in-code-feeds-code-context-displays-feed-list"><a class="link" href="#in-code-feeds-code-context-displays-feed-list">8. In <code>feeds</code> context (displays feed list)</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="adding-a-feed-code-add-code"><a class="link" href="#adding-a-feed-code-add-code">8.1. Adding a feed: <code>add</code></a></h3>
+<div class="paragraph">
+<p>Adds a feed to the manager and subscribes to updates.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add URL [n/NAME] [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A feed can have any number of tags (including 0)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add <a href="https://www.engadget.com/rss.xml" class="bare">https://www.engadget.com/rss.xml</a> n/Engadget t/Tech</code> Adds a feed whose name is “Engadget” and whose links will be tagged with “Tech”</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="updating-links-from-feeds-code-update-code"><a class="link" href="#updating-links-from-feeds-code-update-code">8.2. Updating links from feeds: <code>update</code></a></h3>
+<div class="paragraph">
+<p>Checks feeds for new links and adds them to the manager.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>update INDICES</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>update all</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>update all</code> Updates links from all feeds</p>
+</li>
+<li>
+<p><code>update 2</code> Updates links from the 2nd feed</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="selecting-a-feed-code-select-code"><a class="link" href="#selecting-a-feed-code-select-code">8.3. Selecting a feed: <code>select</code></a></h3>
+<div class="paragraph">
+<p>Selects the feed identified by the index number used in the displayed feed list and displays its links.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>select INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Selects the feed and displays its links.</p>
+</li>
+<li>
+<p>Equivalent to <code>search [URL_OF_INDEXED_FEED]</code></p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed feed list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1`, 2, 3, &#8230;&#8203;`</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>select 2</code> Selects the 2nd feed in the manager and displays its links</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-feed-code-edit-code"><a class="link" href="#editing-a-feed-code-edit-code">8.4. Editing a feed: <code>edit</code></a></h3>
+<div class="paragraph">
+<p>Edits an existing feed in the manager.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>edit INDEX [u/URL] [n/NAME] [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Edits the feed at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed feed list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>At least one of the optional fields must be provided.</p>
+</li>
+<li>
+<p>Existing values will be updated to the input values.</p>
+</li>
+<li>
+<p>When editing tags, the existing tags of the feed will be removed i.e adding of tags is not cumulative.</p>
+</li>
+<li>
+<p>You can remove all the feed’s tags by typing <code>t/</code> without specifying any tags after it.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit 1 n/HackerNews</code> Edits the name of the 1st feed</p>
+</li>
+<li>
+<p><code>edit 2 t/</code> Clears all existing tags from the 2nd feed</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-feed-code-delete-code"><a class="link" href="#deleting-a-feed-code-delete-code">8.5. Deleting a feed: <code>delete</code></a></h3>
+<div class="paragraph">
+<p>Deletes the specified feeds from the manager and unsubscribes from them, but existing links obtained from that feed will not be deleted.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>delete INDICES</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the feeds at the specified indices.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed feed list.</p>
 </li>
 <li>
 <p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
@@ -279,41 +1031,104 @@ Format: <code>delete INDEX</code></p>
 </div>
 </div>
 <div class="paragraph">
+<p>Format: <code>delete all</code></p>
+</div>
+<div class="paragraph">
 <p>Examples:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br>
-<code>delete 2</code><br>
-Deletes the 2nd person in the address book.</p>
+<p><code>delete all</code> Deletes all shown feeds</p>
 </li>
 <li>
-<p><code>find Betsy</code><br>
-<code>delete 1</code><br>
-Deletes the 1st person in the results of the <code>find</code> command.</p>
+<p><code>delete 2</code> Deletes the 2nd feed</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">3.7. Selecting a person : <code>select</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code-2"><a class="link" href="#clearing-all-entries-code-clear-code-2">8.6. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
-<p>Selects the person identified by the index number used in the displayed person list.<br>
-Format: <code>select INDEX</code></p>
+<p>Clears all followed feeds from the manager.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>clear</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="in-code-searchfeeds-code-context-displays-feed-list"><a class="link" href="#in-code-searchfeeds-code-context-displays-feed-list">9. In <code>searchfeeds</code> context (displays feed list)</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="adding-a-feed-code-add-code-2"><a class="link" href="#adding-a-feed-code-add-code-2">9.1. Adding a feed: <code>add</code></a></h3>
+<div class="paragraph">
+<p>Adds a feed from the search results to the manager and subscribes to updates.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add INDEX [n/NAME] [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add INDICES [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>add all</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A feed can have any number of tags (including 0)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add all</code> Adds all shown feeds</p>
+</li>
+<li>
+<p><code>add 1 n/Engadget t/Tech</code> Adds a feed whose name is “Engadget” and whose links will be tagged with <code>Tech</code></p>
+</li>
+<li>
+<p><code>add 5-9 t/Work</code> Adds the 5th to 9th feeds whose links will be tagged with <code>Work</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="selecting-a-feed-code-select-code-2"><a class="link" href="#selecting-a-feed-code-select-code-2">9.2. Selecting a feed: <code>select</code></a></h3>
+<div class="paragraph">
+<p>Selects the feed identified by the index number used in the displayed feed list and displays its links.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>select INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Selects the person and loads the Google search page the person at the specified <code>INDEX</code>.</p>
+<p>Selects the feed and displays its links.</p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed person list.</p>
+<p>Equivalent to <code>search [URL_OF_INDEXED_FEED]</code></p>
 </li>
 <li>
-<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
+<p>The index refers to the index number shown in the displayed feed list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1`, 2, 3, &#8230;&#8203;`</p>
 </li>
 </ul>
 </div>
@@ -325,20 +1140,207 @@ Format: <code>select INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br>
-<code>select 2</code><br>
-Selects the 2nd person in the address book.</p>
+<p><code>select 2</code> Selects the 2nd feed in the manager and displays its links</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="in-code-archives-code-context-displays-link-list"><a class="link" href="#in-code-archives-code-context-displays-link-list">10. In <code>archives</code> context (displays link list)</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="unarchiving-links-code-unarchive-code"><a class="link" href="#unarchiving-links-code-unarchive-code">10.1. Unarchiving links: <code>unarchive</code></a></h3>
+<div class="paragraph">
+<p>Adds the links back to the link list and downloads their content onto disk.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>unarchive INDICES</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>unarchive all</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>unarchive all</code> Unarchives all shown links</p>
 </li>
 <li>
-<p><code>find Betsy</code><br>
-<code>select 1</code><br>
-Selects the 1st person in the results of the <code>find</code> command.</p>
+<p><code>unarchive 1,2,4-6</code> Unarchives the 1st, 2nd and 4th to 6th links</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></h3>
+<h3 id="deleting-an-archived-link-code-delete-code"><a class="link" href="#deleting-an-archived-link-code-delete-code">10.2. Deleting an archived link: <code>delete</code></a></h3>
+<div class="paragraph">
+<p>Deletes specified archived links from the manager.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>delete INDICES</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the links at the specified <code>INDICES</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed link list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Format: <code>delete all</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes all shown links</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete 1,2-6</code> Deletes the 1st, and 2nd to 6th links</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries-code-clear-code-3"><a class="link" href="#clearing-all-entries-code-clear-code-3">10.3. Clearing all entries : <code>clear</code></a></h3>
+<div class="paragraph">
+<p>Clears all archived links from the manager.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>clear</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="non-contextual-commands"><a class="link" href="#non-contextual-commands">11. Non-contextual commands</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These commands can be called from any context.</p>
+</div>
+<div class="sect2">
+<h3 id="custom-user-command-macro-code-macro-code"><a class="link" href="#custom-user-command-macro-code-macro-code">11.1. Custom user command macro: <code>macro</code></a></h3>
+<div class="paragraph">
+<p>Creates macros that compose commands together.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>macro MACRO_NAME NUM_ARGS command1; command2; &#8230;&#8203; commandN</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>macro archive-tags-which-are-old 1 find t/$1 d/3 days ago; archive all</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="export-settings-and-data-to-an-export-file-code-export-code"><a class="link" href="#export-settings-and-data-to-an-export-file-code-export-code">11.2. Export settings and data to an export file : <code>export</code></a></h3>
+<div class="paragraph">
+<p>Exports the feeds, saved data, history, and other preferences to an export file.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>export FILE_PATH</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Serializes all the feeds and other preferences to a file.</p>
+</li>
+<li>
+<p>Copies all saved data into the export folder</p>
+</li>
+<li>
+<p>Compresses export folder to a export file.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>export /home/tt/Desktop</code> Saves an export file to desktop</p>
+</li>
+<li>
+<p><code>export C:\Users\Name\Desktop</code> Saves an export file to desktop</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="import-settings-and-data-from-an-export-file-code-import-code"><a class="link" href="#import-settings-and-data-from-an-export-file-code-import-code">11.3. Import settings and data from an export file : <code>import</code></a></h3>
+<div class="paragraph">
+<p>Imports the feeds, saved data, history, and other preferences from an export file.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>import FILE_PATH</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Decompresses export file</p>
+</li>
+<li>
+<p>Deserializes all the feeds and other preferences from the export file and save it to the application</p>
+</li>
+<li>
+<p>Copies all saved data from the export folder to application database</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>import /home/tt/Desktop/export.jtjr</code> Saves an export file to desktop</p>
+</li>
+<li>
+<p><code>import C:\Users\Name\Desktop\export.jtjr</code> Saves an export file to desktop</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">11.4. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
@@ -359,9 +1361,9 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">11.5. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
+<p>Restores the README to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
 </div>
 <div class="admonitionblock note">
@@ -372,7 +1374,7 @@ Format: <code>undo</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
+<p>Undoable commands: those commands that modify the README&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
 </div>
 </td>
 </tr>
@@ -404,7 +1406,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">11.6. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
 <p>Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
@@ -436,87 +1438,25 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">11.7. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
-<p>Clears all entries from the address book.<br>
-Format: <code>clear</code></p>
+<p>Exits the program.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
-<p>Exits the program.<br>
-Format: <code>exit</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.13. Saving the data</a></h3>
-<div class="paragraph">
-<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
-There is no need to save manually.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></h3>
-<div class="paragraph">
-<p><em>{explain how the user can enable/disable data encryption}</em></p>
+<p>Format: <code>exit</code></p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">4. FAQ</a></h2>
+<h2 id="faq"><a class="link" href="#faq">12. FAQ</a></h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder.</p>
-</div>
+
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">5. Command Summary</a></h2>
+<h2 id="command-summary"><a class="link" href="#command-summary">13. Command Summary</a></h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
-</li>
-<li>
-<p><strong>Clear</strong> : <code>clear</code></p>
-</li>
-<li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
-</li>
-<li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
-</li>
-<li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
-</li>
-<li>
-<p><strong>List</strong> : <code>list</code></p>
-</li>
-<li>
-<p><strong>Help</strong> : <code>help</code></p>
-</li>
-<li>
-<p><strong>Select</strong> : <code>select INDEX</code><br>
-e.g.<code>select 2</code></p>
-</li>
-<li>
-<p><strong>History</strong> : <code>history</code></p>
-</li>
-<li>
-<p><strong>Undo</strong> : <code>undo</code></p>
-</li>
-<li>
-<p><strong>Redo</strong> : <code>redo</code></p>
-</li>
-</ul>
+
 </div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-02-18 14:05:43 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-02-18 15:37:57 UTC</div></div></div></body></html>
