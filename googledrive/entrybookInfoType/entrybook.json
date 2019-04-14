@@ -1,0 +1,87 @@
+{
+  "entries" : [ {
+    "title" : "Algorithmic information theory - Wikipedia",
+    "description" : "Algorithmic information theory is a subfield of information theory and computer science that concerns itself with the relationship between computation and information. According to Gregory Chaitin, it is \"the result of putting…",
+    "link" : "https://en.wikipedia.org/wiki/Algorithmic_information_theory",
+    "address" : "",
+    "tagged" : [ "infoTheory" ]
+  }, {
+    "title" : "Lambda calculus - Wikipedia",
+    "description" : "Lambda calculus (also written as λ-calculus) is a formal system in mathematical logic for expressing computation based on function abstraction and application using variable binding and substitution. It is a universal model…",
+    "link" : "https://en.wikipedia.org/wiki/Lambda_calculus",
+    "address" : "",
+    "tagged" : [ "typeTheory" ]
+  }, {
+    "title" : "System F - Wikipedia",
+    "description" : "System F, also known as the (Girard–Reynolds) polymorphic lambda calculus or the second-order lambda calculus, is a typed lambda calculus that differs from the simply typed lambda calculus by the introduction of…",
+    "link" : "https://en.wikipedia.org/wiki/System_F",
+    "address" : "",
+    "tagged" : [ "typeTheory" ]
+  }, {
+    "title" : "Kolmogorov complexity - Wikipedia",
+    "description" : "This image illustrates part of the",
+    "link" : "https://en.wikipedia.org/wiki/Kolmogorov_complexity",
+    "address" : "",
+    "tagged" : [ "infoTheory" ]
+  }, {
+    "title" : "Computational indistinguishability - Wikipedia",
+    "description" : "In computational complexity and cryptography, two families of distributions are computationally indistinguishable if no efficient algorithm can tell the difference between them except with small probability.",
+    "link" : "https://en.wikipedia.org/wiki/Computational_indistinguishability",
+    "address" : "",
+    "tagged" : [ "infoTheory" ]
+  }, {
+    "title" : "Simply typed lambda calculus - Wikipedia",
+    "description" : "The simply typed lambda calculus ( λ → {\\displaystyle \\lambda ^{\\to }} ), a form of type theory, is a typed interpretation of the lambda calculus with only one type constructor: →…",
+    "link" : "https://en.wikipedia.org/wiki/Simply_typed_lambda_calculus",
+    "address" : "",
+    "tagged" : [ "typeTheory" ]
+  }, {
+    "title" : "Lambda calculus - Wikipedia",
+    "description" : "Lambda calculus (also written as λ-calculus) is a formal system in mathematical logic for expressing computation based on function abstraction and application using variable binding and substitution. It is a universal model…",
+    "link" : "https://en.wikipedia.org/wiki/Lambda_calculus#Reduction",
+    "address" : "",
+    "tagged" : [ "typeTheory" ]
+  }, {
+    "title" : "Beta normal form - Wikipedia",
+    "description" : "In the lambda calculus, a term is in beta normal form if no beta reduction is possible.[1] A term is in beta-eta normal form if neither a beta reduction nor an eta…",
+    "link" : "https://en.wikipedia.org/wiki/Beta_normal_form",
+    "address" : "",
+    "tagged" : [ "typeTheory" ]
+  }, {
+    "title" : "Lambda calculus - Wikipedia",
+    "description" : "Lambda calculus (also written as λ-calculus) is a formal system in mathematical logic for expressing computation based on function abstraction and application using variable binding and substitution. It is a universal model…",
+    "link" : "https://en.wikipedia.org/wiki/Lambda_calculus#%CE%B2-reduction",
+    "address" : "",
+    "tagged" : [ "typeTheory" ]
+  }, {
+    "title" : "Solomonoff's theory of inductive inference",
+    "description" : "Ray Solomonoff's theory of universal inductive inference is a theory of prediction based on logical observations, such as predicting the next symbol based upon a given series of symbols. The only assumption…",
+    "link" : "https://en.wikipedia.org/wiki/Solomonoff's_theory_of_inductive_inference",
+    "address" : "",
+    "tagged" : [ "infoTheory" ]
+  }, {
+    "title" : "Computational Type Theory [5/5] - Robert Harper - OPLSS 2018",
+    "description" : "Oregon Programming Languages Summer School Parallelism and Concurrency July 3-21, 2018 University of Oregon https://www.cs.uoregon.edu/research/summerschool/...",
+    "link" : "https://www.youtube.com/watch?v=RhDuRmg-SdA&t=752s",
+    "address" : "",
+    "tagged" : [ "typeTheory" ]
+  }, {
+    "title" : "John's Combinatory Logic Playground",
+    "description" : "Pictured above you can see on the left the 206 bit binary lambda calculus (blc) self-interpreter in graphical notation, and on the right a 167 bit primes program, in both binary and…",
+    "link" : "https://tromp.github.io/cl/cl.html",
+    "address" : "",
+    "tagged" : [ "infoTheory" ]
+  }, {
+    "title" : "tromp/AIT: Algorithmic Information Theory, using Binary Lambda Calculus",
+    "description" : "Algorithmic Information Theory, using Binary Lambda Calculus - tromp/AIT",
+    "link" : "https://github.com/tromp/AIT",
+    "address" : "",
+    "tagged" : [ "infoTheory" ]
+  }, {
+    "title" : "Universal search - Scholarpedia",
+    "description" : "Universal or Levin Search is an algorithm for solving inversion problems, devised by Leonid A. Levin (1973, 1984). It is related to the concept of \\(Kt\\) or Levin complexity, a computable, time-bounded…",
+    "link" : "http://www.scholarpedia.org/article/Universal_search",
+    "address" : "",
+    "tagged" : [ "infoTheory" ]
+  } ]
+}

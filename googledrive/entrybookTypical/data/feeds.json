@@ -1,0 +1,33 @@
+{
+  "entries" : [ {
+    "title" : "Hacker News",
+    "description" : "Links for the intellectually curious, ranked by readers.",
+    "link" : "https://news.ycombinator.com/rss",
+    "tagged" : [ "tech" ]
+  }, {
+    "title" : "Top News - MIT Technology Review",
+    "description" : "Topnews",
+    "link" : "https://www.technologyreview.com/topnews.rss",
+    "tagged" : [ "tech" ]
+  }, {
+    "title" : "BBC News - World",
+    "description" : "BBC News - World",
+    "link" : "http://feeds.bbci.co.uk/news/world/rss.xml",
+    "tagged" : [ "worldnews" ]
+  }, {
+    "title" : "Recent Problems - Kattis",
+    "description" : "Kattis Recent Problems RSS Feed",
+    "link" : "https://open.kattis.com/rss/new-problems",
+    "tagged" : [ "programming" ]
+  }, {
+    "title" : "IGN Video Games",
+    "description" : "The latest IGN news, reviews and videos about video games",
+    "link" : "http://feeds.ign.com/ign/games-all",
+    "tagged" : [ "games" ]
+  }, {
+    "title" : "Engadget RSS Feed",
+    "description" : "Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics",
+    "link" : "https://live.engadget.com/rss.xml",
+    "tagged" : [ "tech" ]
+  } ]
+}
