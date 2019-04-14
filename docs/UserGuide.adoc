@@ -495,10 +495,23 @@ Format: `find [a/SEARCH_PHRASE] [ti/TITLE_SEARCH_PHRASE] [d/DESCRIPTION_SEARCH_P
 
 Examples:
 
-* `find ti/Trump` +
-Returns entries with titles containing the phrase `trump` such as `Donald Trump` or `CS average salary trumps again`
-* `find l/cnn t/science` +
-Returns any entries having links containing the phrase `cnn` and entries with the exact tag `science`.
+* `find ti/lambda l/github` +
+Returns entries with title containing the phrase `lambda`, or link containing the phrase `github`
+
+.Before: Entering the find command with search terms
+image::ug-find/ug-fieldx-1.png[width="800"]
+
+.After: Only entries with title containing `lambda` (red) or link containing `github` (orange) shown
+image::ug-find/ug-fieldx-2.png[width="800"]
+
+* `find t/infoTheory` +
+Returns any entries with the tag `infoTheory`
+
+.Before: Entering the find command for specific tags
+image::ug-find/ug-tagx-1.png[width="800"]
+
+.After: Only entries with tag `infoTheory` shown
+image::ug-find/ug-tagx-2.png[width="800"]
 
 ==== Selecting an entry: `select`
 
@@ -610,9 +623,17 @@ Format: `archive INDEX`
 
 Examples:
 
-* `list` +
-`archive 2` +
+* `archive 2` +
 Moves the 2nd entry in the reading list to the archive and removes its downloaded content.
+
+.Archiving the second entry
+image::ug-archive/ug-archivex-1.png[width="800"]
+
+* `archives` +
+Change to the archives context to view the archived entry
+
+.Entry is saved in the archives
+image::ug-archive/ug-archivex-2.png[width="250"]
 
 ==== Deleting an entry: `delete` `[updated v1.3]`
 
